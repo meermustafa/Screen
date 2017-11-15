@@ -1,5 +1,8 @@
 library(BSgenome.Hsapiens.UCSC.hg19)
-y = getSeq(Hsapiens, "chr8", 127700000, 130900000)
+chr = ''
+chromstart = c()
+chromend = c()
+y = getSeq(Hsapiens, chr, chromstart, chromend)
 
 NGGforwardmatchfixed = matchPattern(pattern = patternNGG, subject = y, max.mismatch = 0, fixed = FALSE)
 
